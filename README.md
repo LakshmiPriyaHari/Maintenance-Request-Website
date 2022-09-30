@@ -13,3 +13,7 @@ The admin panel consists of the following information:
 2. Ability to view the details of a request.
 3. Ability to edit a request.
 4. Ability to delete a request.
+
+To execute the code:
+1. Open the code in Visual Studio Code
+2. Install node modules using 'npm install'
