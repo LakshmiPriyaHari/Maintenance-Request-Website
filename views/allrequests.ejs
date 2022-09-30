@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <%- include('partials/meta.ejs') %> 
+  <title>All Requests</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <section class="items grid1">
+        <div class="propcards">     
+          <img src="images/room.jpg" alt="cap">  
+        </div>
+        <div class="propcards">     
+          <img src="images/home.jpg" alt="shoes">
+        </div>
+        <div class="propcards">      
+          <img src="images/livingroom.jpg" alt="sunglass">
+        </div>
+      </section>
+    <section class="dashboard">     
+    <h1>Dashboard</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>                
+            </tr>
+            <%
+                for(var request of requests){
+                    %>
+                        <tr>
+                            <td><a href="/print/<%= request._id %>"><%= request._id %></a></td>
+                            <td><%= request.userName %></td>
+                            <td><%= request.userEmail %></td>
+                            <td><%- request.userDescription %></td>
+                            <td><a href="/print/<%= request._id %>">VIEW</a></td>
+                            <td><a href="/edit/<%= request._id %>">EDIT</a></td>
+                            <td><a href="/delete/<%= request._id %>">DELETE</a></td>                            
+                        </tr>
+                    <%
+                }
+            %>
+
+            
+        </table>
+    </section>
+  </main>
+  
+  <%- include('partials/footer.ejs') %> 
+
+</body>
+</html>

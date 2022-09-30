@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/meta.ejs') %> 
+  <title>Edit</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <h1>Edit Form</h1>
+    <section class="editform">
+    <h2>Edit Request</h2>
+    <form action="/editprocess/<%= _id %> " method="POST" enctype="multipart/form-data">
+      <div class="wrapper">
+        <label for="userName">Name</label>
+        <input type="text" id="userName" name="userName" value="<%= userName %>">      
+      </div>
+      <div class="wrapper">
+        <label for="userEmail">Email</label>
+        <input type="text" id="userEmail" name="userEmail" value="<%= userEmail %>">
+      </div>
+      <div class="wrapper">
+        <label for="userImage">Photo</label>
+        <input type="file" id="userImage" name="userImage">
+      </div>
+      <div class="wrapper">
+        <label for="userDescription">Description</label>
+        <input type="text" id="userDescription" name="userDescription" value="<%= userDescription %>">
+      </div>
+      <div class="submission">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+</section>
+  </main>
+  
+  <%- include('partials/footer.ejs') %> 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/js/tinymce/tinymce.min.js"></script>
+  <script>
+      tinymce.init({
+        selector: '#userDescription'
+      });
+  </script>
+</body>
+</html>

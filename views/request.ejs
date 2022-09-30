@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/meta.ejs') %> 
+  <title>Request</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <h1>View</h1>     
+    <section class="items grid1">
+      <div class="propcards">     
+        <img src="/images/room.jpg" alt="Room">  
+      </div>
+      <div class="propcards">     
+        <img src="/images/home.jpg" alt="Home">
+      </div>
+      <div class="propcards">      
+        <img src="/images/livingroom.jpg" alt="Livingroom">
+      </div>
+    </section>
+    <section class="viewrequest">
+        <div>   
+          <table>
+            <tr>
+              <th>Name: </th>
+              <td><%= userName %></td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td><%= userEmail %></td>
+            </tr>
+            <tr>
+              <th>Description: </th>
+              <td><%- userDescription %></td>
+            </tr>
+          </table>
+          <div class="userupload">
+            <p>Image</p>
+            <img src="/uploads/<%= userImageName %>" alt="Photo"> 
+          </div>                
+    </section>
+  </main>
+  
+  <%- include('partials/footer.ejs') %>
+  
+</body>
+</html>

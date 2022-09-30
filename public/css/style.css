@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;1,400;1,700&family=Cormorant+SC:wght@700&family=Open+Sans:ital,wght@0,300;0,800;1,400;1,500;1,600;1,800&family=Oswald:wght@400;500;700&family=Roboto:wght@300;500;700&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+body{
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+body.card{
+    background-image: none;
+}
+.logo{
+    float: left;
+    width: 50px;
+    margin-top: auto;
+    padding: 20px;
+  }
+  
+  .logo img{
+    width: 100%;
+  }
+  .tagline{
+    display:block;
+    padding:20px;
+    margin:10px 10px;
+    text-align: left;
+  }
+header{
+    text-align: center;
+}
+nav{
+text-align: center;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul a{
+    color: black;
+    display: inline-block;
+    padding: 10px 30px;
+}
+.propimage{
+    position: relative; /* to make this div the relative ancestor of .herotext */
+    text-align: center; /* to center all the content in .hero */
+    padding: 10px;
+}
+img{
+    width: 100%; /* make the image go all the way from left to the right */
+}
+.userrequest{
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+}
+body.card main{
+  /*  background-image: url(/images/halloween-bg.jpg); */
+  /*  background-size: cover; */
+    background-color:  #450a1348;
+    color: black;
+    padding-bottom: 40px;
+    border: 5px solid black;
+}
+body.card footer{
+    color: black;
+}
+main{
+    width: 1000px;
+    margin: 20px auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+}
+main h1{
+    font-weight: normal;
+    text-align: center;
+    color: black;
+}
+main .wrapper{
+    margin: 10px;
+}
+main .wrapper label{
+    width: 170px;
+    display: inline-block;
+    font-size: 18px;
+    color: black;
+}
+main .wrapper input{
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+}
+main .submission{
+    text-align: center;
+    margin: 20px;
+}
+main .submission input{
+    border: 2px solid black;
+    font-size: 24px;
+    color: black;
+    padding: 5px 10px;
+}
+.thankyouimage{
+    position: relative; /* to make this div the relative ancestor of .herotext */
+    text-align: center; /* to center all the content in .hero */
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+}
+.thankyouimage img{
+ width: 500px;
+}
+main .logininfo{
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap:50px;
+}
+.logininput{
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+}
+/* all requests */
+img{
+    max-width: 100%;
+} 
+.items{   
+        display : grid;
+        font-size: 15px;
+        grid-row-gap : 0;
+        grid-column-gap : 30px;
+        margin:30px 0;    
+}
+.grid1
+{            
+    grid-template-columns: 1fr 1fr 1fr;            
+}  
+.propcards{
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+}
+main .dashboard{
+    width:950px;
+    margin:auto;
+}
+.dashboard{
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding:5px 10px;
+  }
+  tbody tr:nth-child(even) td,
+  tbody tr:nth-child(even) td{
+      background-color: #e5e5e5;
+  }
+
+  /* Edit form*/
+
+ .editform{
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+ /* Request */
+ .userupload img{
+    width:400px;
+ }
+
+ .viewrequest{
+    width:900px;
+    padding:20px;
+    margin:20px;
+    box-shadow: 0 0 10px rgb(39, 20, 20);
+    padding: 20px;
+    border-radius: 10px;
+ }
+
+ .viewrequest table,th,td {
+    border: 2px solid white;
+    font-size: 18px;
+ }
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+footer a{
+    color: white;
+}
+.error{
+    font-size: 12px;
+    color: #9f0b0a;
+    text-align: right;
+}
+.cardData{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.cardData img{
+    width: 100px;
+}
+
+/* Login Page */
+
+main .logindetails{
+    padding: 30px;
+    margin: auto;
+
+}
+.logindetails input{
+    padding: 10px;
+    margin: 10px 0;
+}
+main .loginform{
+    
+        display:grid;
+        grid-template-columns: 1fr;        
+    
+}
+.submit_wrapper input{
+    width: 100%;
+}

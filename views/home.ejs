@@ -1,0 +1,83 @@
+<%
+  var userName = '';
+  var userEmail = '';
+  var userDescription = '';
+
+  var userNameError = '';
+  var userEmailError = '';
+  var userDescriptionError = '';
+
+  if(typeof(er) != 'undefined')
+  {
+    for(var error of er)
+    { 
+      switch(error.param){
+        case 'userName':         userName = error.value;
+                                  userNameError = error.msg;
+                                  break;
+        case 'userEmail':        userEmail = error.value;
+                                  userEmailError = error.msg;
+                                  break;
+        case 'userDescription':  userDescription = error.value;
+                                  userDescriptionError = error.msg;
+                                  break;
+      }
+    }
+  }
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/meta.ejs') %> 
+  <title>Home</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <section class="homeform">
+    <div class="propimage">
+      <img src="images/home.jpg" alt="Home">
+    </div>
+    <div class="userrequest">
+    <h1>New Request</h1>
+    <form action="process" method="POST" enctype="multipart/form-data">
+      <div class="wrapper">
+        <label for="userName">Name</label>
+        <input type="text" id="userName" name="userName" 
+        value="<%= userName %>">
+        <p class="error"><%= userNameError %></p>
+      </div>
+      <div class="wrapper">
+        <label for="userEmail">Email</label>
+        <input type="text" id="userEmail" name="userEmail" 
+        value="<%= userEmail %>">
+        <p class="error"><%= userEmailError %></p>
+      </div>
+      <div class="wrapper">
+        <label for="userImage">Photo</label>
+        <input type="file" id="userImage" name="userImage">
+      </div>
+      <div class="wrapper">
+        <label for="userDescription">Description</label>
+        <input type="text" id="userDescription" name="userDescription">
+        <p class="error"><%= userDescriptionError %></p>
+      </div>     
+      <div class="submission">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</section>
+  </main>
+  
+  <%- include('partials/footer.ejs') %>
+
+  <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+          selector: '#userDescription'
+        });
+      </script>
+</body>
+</html>

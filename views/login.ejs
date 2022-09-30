@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/meta.ejs') %> 
+  <title>Login</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <section class="logininfo">
+      <div class="loginimg">
+        <img src="images/livingroom.jpg" alt="Livingroom">
+      </div>
+      <div class="logininput">
+    <h1>Login</h1>
+    <form action="login" method="POST">
+      <div class="wrapper">
+        <label for="uname">Username</label>
+        <input type="text" id="uname" name="uname">
+      </div>
+      <div class="wrapper">
+        <label for="upass">Password</label>
+        <input type="password" id="upass" name="upass">
+      </div> 
+      <div class="submission">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+  </section>
+  </main>
+  <%- include('partials/footer.ejs') %> 
+</body>
+</html>
