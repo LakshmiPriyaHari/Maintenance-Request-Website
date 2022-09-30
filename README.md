@@ -17,3 +17,5 @@ The admin panel consists of the following information:
 To execute the code:
 1. Open the code in Visual Studio Code
 2. Install node modules using 'npm install'
+
+The MIT license gives users express permission to reuse code for any purpose, sometimes even if code is part of proprietary software. As long as users include the original copy of the MIT license in their distribution, they can make any changes or modifications to the code to suit their own needs.
